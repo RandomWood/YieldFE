@@ -18,6 +18,16 @@ currentVersion = '1.0.0'
 
 Players = game:GetService("Players")
 
+-- MOBILE GETGENVS --
+getgenv().mfly = false
+
+-- MOBILE FUNCTIONS --
+function mFly()
+ if getgenv().mfly == true then
+   game.Players.LocalPlayer:Kick("testing")
+ end
+end
+
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
 Dark = Instance.new("Frame")
@@ -9431,6 +9441,13 @@ addcmd('unflyjump',{'noflyjump'},function(args, speaker)
 	if flyjump then flyjump:Disconnect() end
 end)
 
+addcmd('mobilefly',{'mfly'},functiom(args, speaker)
+      -- reminder to myself: add unfly for mfly
+        getgenv().mfly = true
+        wait(0.1)
+        mFly()
+end)
+
 local HumanModCons = {}
 addcmd('autojump',{'ajump'},function(args, speaker)
 	local Char = speaker.Character
@@ -12311,6 +12328,6 @@ task.spawn(function()
 	minimizeHolder()
 	if table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform()) then notify("Unstable Device", "Please note that Yield Fe\'s mobile support isn\'t fully finished and bugs may occur") end
 end)
-if identifyexecutor() == "Fluxus" then
+if identifyexecutor()  == "Fluxus" then
 notify("Yield FE", "Testimg identifyexecutor, ignore this")
 end
