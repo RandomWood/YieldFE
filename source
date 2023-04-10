@@ -6886,32 +6886,7 @@ addcmd('flyspeed',{'flysp'},function(args, speaker)
 end)
 
 addcmd('mobilefly',{'mfly'},function(args, speaker)
-        speaker.Character.Animate.Disabled = true
-        NOFLY()
-        wait()
-        sFLY()
-        if args[1] and isNumber(args[1]) then
-                iyflyspeed = args[1]
-        end
-        oldgrav = workspace.Gravity
-                workspace.Gravity = 0
-                local swimDied = function()
-                        workspace.Gravity = oldgr>
-                        swimming = false
-                end
-                local Humanoid = speaker.Characte>
-                gravReset = Humanoid.Died:Connect>
-                local enums = Enum.HumanoidStateT>
-                table.remove(enums, table.find(en>
-                for i, v in pairs(enums) do
-                        Humanoid:SetStateEnabled(>
-                end
-                Humanoid:ChangeState(Enum.Humanoi>
-                swimbeat = RunService.Heartbeat:C>
-                        pcall(function()
-                                speaker.Character>
-                        end)
-                end)
+    execCmd('swim')
 end)
 
 addcmd('unfly',{'nofly','novfly','unvehiclefly','novehiclefly','unvfly'},function(args, speaker)
