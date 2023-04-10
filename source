@@ -23,10 +23,11 @@ getgenv().mfly = false
 
 -- MOBILE FUNCTIONS --
 function mFly()
- if getgenv().mfly == true then
-   game.Players.LocalPlayer:Kick("testing")
- end
-end)
+-- if getgenv().mfly == true then
+  -- game.Players.LocalPlayer:Kick("testing")
+ --end
+print("uwu")
+end
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
