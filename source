@@ -26,7 +26,7 @@ function mFly()
  if getgenv().mfly == true then
    game.Players.LocalPlayer:Kick("testing")
  end
-end
+end)
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
