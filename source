@@ -6886,9 +6886,9 @@ addcmd('flyspeed',{'flysp'},function(args, speaker)
 end)
 
 addcmd('mobilefly',{'mfly'},function(args, speaker)
-   execCmd('noanim') 
+   execCmd('noanim')
+   execCmd('tpwalk', 9) 
    execCmd('swim')
-   execCmd('tpwalk 9')
    execCmd('fly')
 end)
 
