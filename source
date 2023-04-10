@@ -401,7 +401,7 @@ ColorsButton.Name = "Colors"
 ColorsButton.Parent = SettingsHolder
 
 Keybinds = makeSettingsButton("Edit Keybinds","rbxassetid://129697930")
-Keybinds.Position = UDim2.new(0, 5, 0, 85)
+Keybinds.Position = UDim2.new(0, 5, 0, 8w5)
 Keybinds.Size = UDim2.new(1, -10, 0, 25)
 Keybinds.Name = "Keybinds"
 Keybinds.Parent = SettingsHolder
@@ -1373,7 +1373,7 @@ About.Position = UDim2.new(0, 17, 0, 10)
 About.Size = UDim2.new(0, 187, 0, 49)
 About.Font = Enum.Font.SourceSans
 About.TextSize = 14
-About.Text = "Plugins are .iy files and should be located in the 'workspace' folder of your exploit."
+About.Text = "Plugins are .yi files and should be located in the 'workspace' folder of your exploit."
 About.TextColor3 = Color3.fromRGB(255, 255, 255)
 About.TextWrapped = true
 About.TextYAlignment = Enum.TextYAlignment.Top
@@ -2832,14 +2832,14 @@ function saves()
 					saves()
 				end
 			else
-				writefileCooldown("IY_FE.iy", defaults)
+				writefileCooldown("YI_FE.yi", defaults)
 				wait()
 				saves()
 			end
 		else
-			writefileCooldown("IY_FE.iy", defaults)
+			writefileCooldown("YI_FE.yi", defaults)
 			wait()
-			if pcall(function() readfile("IY_FE.iy") end) then
+			if pcall(function() readfile("YI_FE.yi") end) then
 				saves()
 			else
 				nosaves = true
@@ -2970,7 +2970,7 @@ function updatesaves()
 			currentScroll = {currentScroll.R,currentScroll.G,currentScroll.B};
 			eventBinds = eventEditor.SaveData()
 		}
-		writefileCooldown("IY_FE.iy", HttpService:JSONEncode(update))
+		writefileCooldown("YI_FE.yi", HttpService:JSONEncode(update))
 	end
 end
 
@@ -6009,7 +6009,7 @@ end)
 PluginsGUI = PluginEditor.background
 
 function addPlugin(name)
-	if name:lower() == 'plugin file name' or name:lower() == 'iy_fe.iy' or name == 'iy_fe' then
+	if name:lower() == 'plugin file name' or name:lower() == 'YI_fe.yi' or name == 'YI_fe' then
 		notify('Plugin Error','Please enter a valid plugin')
 	else
 		local file
