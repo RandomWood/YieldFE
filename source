@@ -16,6 +16,19 @@ end
 
 currentVersion = '1.0.0'
 
+
+-- MOBILE GETGENVS --
+
+getgenv().mFlyToggle = false
+
+-- MOBILE FUNCTIONS --
+function mFly()
+  while getgenv().mFlyToggle == true do
+     print('testeing uwuwubdue7e7wuvxdhjd')
+      wait(5)
+ end
+end
+
 Players = game:GetService("Players")
 
 Holder = Instance.new("Frame")
@@ -4303,7 +4316,7 @@ CMDs[#CMDs + 1] = {NAME = 'unnoclip / clip', DESC = 'Disables noclip'}
 CMDs[#CMDs + 1] = {NAME = 'fly [speed]', DESC = 'Makes you fly'}
 CMDs[#CMDs + 1] = {NAME = 'unfly', DESC = 'Disables fly'}
 CMDs[#CMDs + 1] = {NAME = 'flyspeed [num]', DESC = 'Set fly speed (default is 20)'}
---CMDs[#CMDs + 1] = {NAME = "mobilefly / mfly [speed]', DESC = "Allows you to fly on mobile devices'}
+CMDs[#CMDs + 1] = {NAME = 'mobilefly / mfly [speed]', DESC = 'Allows you to fly on mobile devices'}
 CMDs[#CMDs + 1] = {NAME = 'vehiclefly / vfly [speed]', DESC = 'Makes you fly in a vehicle'}
 CMDs[#CMDs + 1] = {NAME = 'unvehiclefly / unvfly', DESC = 'Disables vehicle fly'}
 CMDs[#CMDs + 1] = {NAME = 'vehicleflyspeed  / vflyspeed [num]', DESC = 'Set vehicle fly speed'}
@@ -6883,6 +6896,12 @@ addcmd('flyspeed',{'flysp'},function(args, speaker)
 	if isNumber(speed) then
 		iyflyspeed = speed
 	end
+end)
+
+addcmd('mobilefly',{'mfly'},function(args, speaker)
+  getgenv().mFlyToggle = true
+  wait()
+  mFly()
 end)
 
 addcmd('unfly',{'nofly','novfly','unvehiclefly','novehiclefly','unvfly'},function(args, speaker)
