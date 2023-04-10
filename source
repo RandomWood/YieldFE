@@ -9442,7 +9442,7 @@ addcmd('unflyjump',{'noflyjump'},function(args, speaker)
 	if flyjump then flyjump:Disconnect() end
 end)
 
-addcmd('mobilefly',{'mfly'},functiom(args, speaker)
+addcmd('mobilefly',{'mfly'},function(args, speaker)
       -- reminder to myself: add unfly for mfly
         getgenv().mfly = true
         wait(0.1)
