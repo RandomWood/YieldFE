@@ -6896,7 +6896,7 @@ addcmd('mobilefly',{'mfly'},function(args, speaker)
    execCmd('fly')
 end)
 
-addcmd('unmobilefly',{'unmfly'},function(args, speaker(
+addcmd('unmobilefly',{'unmfly'},function(args, speaker)
    execCmd('untpwalk')
    wait()
    execCmd('unswim')
