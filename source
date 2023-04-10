@@ -401,7 +401,7 @@ ColorsButton.Name = "Colors"
 ColorsButton.Parent = SettingsHolder
 
 Keybinds = makeSettingsButton("Edit Keybinds","rbxassetid://129697930")
-Keybinds.Position = UDim2.new(0, 5, 0, 8w5)
+Keybinds.Position = UDim2.new(0, 5, 0, 85)
 Keybinds.Size = UDim2.new(1, -10, 0, 25)
 Keybinds.Name = "Keybinds"
 Keybinds.Parent = SettingsHolder
@@ -6009,7 +6009,7 @@ end)
 PluginsGUI = PluginEditor.background
 
 function addPlugin(name)
-	if name:lower() == 'plugin file name' or name:lower() == 'YI_fe.yi' or name == 'YI_fe' then
+	if name:lower() == 'plugin file name' or name:lower() == 'YI_FE.yi' or name == 'YI_fe' then
 		notify('Plugin Error','Please enter a valid plugin')
 	else
 		local file
