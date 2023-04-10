@@ -4304,6 +4304,7 @@ CMDs[#CMDs + 1] = {NAME = 'fly [speed]', DESC = 'Makes you fly'}
 CMDs[#CMDs + 1] = {NAME = 'unfly', DESC = 'Disables fly'}
 CMDs[#CMDs + 1] = {NAME = 'flyspeed [num]', DESC = 'Set fly speed (default is 20)'}
 CMDs[#CMDs + 1] = {NAME = 'mobilefly / mfly', DESC = 'Allows you to fly on mobile devices'}
+CMDs[#CMDs + 1] = {NAME = 'unmobilefly / unmfly', DESC = 'Disables mobile fly'}
 CMDs[#CMDs + 1] = {NAME = 'vehiclefly / vfly [speed]', DESC = 'Makes you fly in a vehicle'}
 CMDs[#CMDs + 1] = {NAME = 'unvehiclefly / unvfly', DESC = 'Disables vehicle fly'}
 CMDs[#CMDs + 1] = {NAME = 'vehicleflyspeed  / vflyspeed [num]', DESC = 'Set vehicle fly speed'}
@@ -6887,9 +6888,20 @@ end)
 
 addcmd('mobilefly',{'mfly'},function(args, speaker)
    execCmd('noanim')
-   execCmd('tpwalk', 9) 
+   wait()
+   execCmd('tpwalk', 9)
+   wait() 
    execCmd('swim')
+   wait()
    execCmd('fly')
+end)
+
+addcmd('unmobilefly',{'unmfly'},function(args, speaker(
+   execCmd('untpwalk')
+   wait()
+   execCmd('unswim')
+   wait()
+   execCmd('unfly')
 end)
 
 addcmd('unfly',{'nofly','novfly','unvehiclefly','novehiclefly','unvfly'},function(args, speaker)
