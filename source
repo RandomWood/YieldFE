@@ -19,15 +19,15 @@ currentVersion = '1.0.0'
 Players = game:GetService("Players")
 
 -- MOBILE GETGENVS --
-getgenv().mfly = false
+--getgenv().mfly = false
 
 -- MOBILE FUNCTIONS --
-function mFly()
- if getgenv().mfly == true then
-   game.Players.LocalPlayer:Kick("testing")
- end
+--function mFly()
+-- if getgenv().mfly == true then
+  -- game.Players.LocalPlayer:Kick("testing")
+-- end
 --print("uwu")
-end
+--end
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
@@ -9442,12 +9442,12 @@ addcmd('unflyjump',{'noflyjump'},function(args, speaker)
 	if flyjump then flyjump:Disconnect() end
 end)
 
-addcmd('mobilefly',{'mfly'},function(args, speaker)
+--addcmd('mobilefly',{'mfly'},function(args, speaker)
       -- reminder to myself: add unfly for mfly
-        getgenv().mfly = true
-        wait(0.1)
-        mFly()
-end)
+  --      getgenv().mfly = true
+    --    wait(0.1)
+      --  mFly()
+--end)
 
 local HumanModCons = {}
 addcmd('autojump',{'ajump'},function(args, speaker)
