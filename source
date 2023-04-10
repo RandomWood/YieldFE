@@ -16,19 +16,6 @@ end
 
 currentVersion = '1.0.0'
 
-
--- MOBILE GETGENVS --
-
-getgenv().mFlyToggle = false
-
--- MOBILE FUNCTIONS --
-function mFly()
-  while getgenv().mFlyToggle == true do
-     print('testeing uwuwubdue7e7wuvxdhjd')
-      wait(5)
- end
-end
-
 Players = game:GetService("Players")
 
 Holder = Instance.new("Frame")
@@ -4316,7 +4303,7 @@ CMDs[#CMDs + 1] = {NAME = 'unnoclip / clip', DESC = 'Disables noclip'}
 CMDs[#CMDs + 1] = {NAME = 'fly [speed]', DESC = 'Makes you fly'}
 CMDs[#CMDs + 1] = {NAME = 'unfly', DESC = 'Disables fly'}
 CMDs[#CMDs + 1] = {NAME = 'flyspeed [num]', DESC = 'Set fly speed (default is 20)'}
-CMDs[#CMDs + 1] = {NAME = 'mobilefly / mfly [speed]', DESC = 'Allows you to fly on mobile devices'}
+CMDs[#CMDs + 1] = {NAME = 'mobilefly / mfly', DESC = 'Allows you to fly on mobile devices'}
 CMDs[#CMDs + 1] = {NAME = 'vehiclefly / vfly [speed]', DESC = 'Makes you fly in a vehicle'}
 CMDs[#CMDs + 1] = {NAME = 'unvehiclefly / unvfly', DESC = 'Disables vehicle fly'}
 CMDs[#CMDs + 1] = {NAME = 'vehicleflyspeed  / vflyspeed [num]', DESC = 'Set vehicle fly speed'}
@@ -6899,9 +6886,32 @@ addcmd('flyspeed',{'flysp'},function(args, speaker)
 end)
 
 addcmd('mobilefly',{'mfly'},function(args, speaker)
-  getgenv().mFlyToggle = true
-  wait()
-  mFly()
+        speaker.Character.Animate.Disabled = true
+        NOFLY()
+        wait()
+        sFLY()
+        if args[1] and isNumber(args[1]) then
+                iyflyspeed = args[1]
+        end
+        oldgrav = workspace.Gravity
+                workspace.Gravity = 0
+                local swimDied = function()
+                        workspace.Gravity = oldgr>
+                        swimming = false
+                end
+                local Humanoid = speaker.Characte>
+                gravReset = Humanoid.Died:Connect>
+                local enums = Enum.HumanoidStateT>
+                table.remove(enums, table.find(en>
+                for i, v in pairs(enums) do
+                        Humanoid:SetStateEnabled(>
+                end
+                Humanoid:ChangeState(Enum.Humanoi>
+                swimbeat = RunService.Heartbeat:C>
+                        pcall(function()
+                                speaker.Character>
+                        end)
+                end)
 end)
 
 addcmd('unfly',{'nofly','novfly','unvehiclefly','novehiclefly','unvfly'},function(args, speaker)
