@@ -12330,5 +12330,9 @@ task.spawn(function()
 	Credits:Destroy()
 	IntroBackground:Destroy()
 	minimizeHolder()
-	if table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform()) then notify("Unstable Device", "Please note that Yield Fe\'s mobile support isn\'t fully finished and bugs may occur") end
+	--if table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform()) then notify("Unstable Device", "Please note that Yield Fe\'s mobile support isn\'t fully finished and bugs may occur") end
+local executor = idenitfyexecutor and identifyexecutor() or "Unknown"
+if executor == "Fluxus" then
+ print('bwomp')
+ end
 end)
