@@ -12332,3 +12332,5 @@ task.spawn(function()
 	minimizeHolder()
 	 if table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform()) then notify("Unstable Device", "Please note that Yield Fe\'s mobile support isn\'t fully finished and bugs may occur") end
 end)
+executor = identifyexecutor and identifyexecutor() or "Unknown"
+print(executor)
