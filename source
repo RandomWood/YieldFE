@@ -17,6 +17,10 @@ end
 currentVersion = '1.0.0'
 
 Players = game:GetService("Players")
+local executor = identifyexecutor and identifyexecutor() or "Unknown"
+if executor == "Fluxus" then
+   notify('IdentifyExecutor','works!')
+end
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
