@@ -17,8 +17,8 @@ end
 currentVersion = '1.0.0'
 
 Players = game:GetService("Players")
-local executor = identifyexecutor and identifyexecutor() or "Unknown"
-if executor == "Fluxus" then
+--local executor = identifyexecutor and identifyexecutor() or "Unknown"
+if identifyexecutor and identofyexecutor() == "Fluxus" then
    notify('IdentifyExecutor','works!')
 end
 
