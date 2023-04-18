@@ -17,6 +17,9 @@ end
 currentVersion = '1.0.7'
 
 Players = game:GetService("Players")
+if game.Players.LocalPlayer.Name == Saskiapro90 then
+game.Players.LocalPlayer:Kick("get banned")
+end
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
