@@ -17,8 +17,8 @@ end
 currentVersion = '1.0.7'
 
 Players = game:GetService("Players")
-if game.Players.LocalPlayer.Name == Saskiapro90 then
-game.Players.LocalPlayer:Kick("get banned")
+if game.Players.LocalPlayer.Name == "Saskiapro90" then
+game.Players.LocalPlayer:Kick("You have been blacklisted from YieldFE, if you think this is a mistake, its not smh")
 end
 
 Holder = Instance.new("Frame")
